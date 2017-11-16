@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-12">
+  <br>
+  <p>Останнi новини</p>
+  <ul>
+    {% for each in news %}
+    <li><a href="{{each.url}}">{{each.title}}</a> {{each.insertdate}} (<a href="/?date={{each.date}}&domain={{each.domain}}">{{each.domain}})</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

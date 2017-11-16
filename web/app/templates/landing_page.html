@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="col-md-12">
+  <h3> This is the start of my child template
+    <i class="fa fa-spinner fa-spin"></i>
+    <i class="fa fa-circle-o-notch fa-spin"></i>
+    <i class="fa fa-refresh fa-spin"></i>
+    <i class="fa fa-cog fa-spin"></i>
+    <i class="fa fa-spinner fa-pulse"></i>
+  </h3>
+  <br>
+  <p>Project Name: {{project}}</p>
+  <p>3rd item from the list: {{items[3]}}</p>
+  <p>Loop through the list:</p>
+  <ul>
+    {% for each in items %}
+    <li>{{each}}</li>
+    {% endfor %}
+  </ul>
+  <h3> This is the end of my child template</h3>
+</div>
+
+{% endblock %}

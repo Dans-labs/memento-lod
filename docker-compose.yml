@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  elasticsearch:
+      build: elasticsearch/
+      volumes:
+        - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      ports:
+        - "9200:9200"
+        - "9300:9300"
+      environment:
+        ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      networks:
+        - elk
+  mysql:
+    image: mysql
+    container_name: test-mysql
+    ports:
+      - 6603:3306
+    environment:
+       - MYSQL_ROOT_PASSWORD=root
+       - MYSQL_USER=user
+       - MYSQL_PASSWORD=password
+       - MYSQL_MY_DATABASE=my-database
+    volumes:
+      - /Users/vyacheslavtykhonov/mysqldb:/var/lib/mysql
+
+  web:
+    build: ./web
+    restart: always
+    ports:
+      - "5000:5000"
+      - "9998:22"
+    environment:
+      - "DOCKER_MACHINE_IP=0.0.0.0"
+    depends_on:
+      - elasticsearch
+networks:
+  elk:
+    driver: bridge
