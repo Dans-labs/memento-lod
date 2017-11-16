@@ -7,6 +7,14 @@ services:
         - "9280:80"
         - "9888:8888"
 
+  virtuoso:
+      build: virtuoso
+      ports:
+	- "8890:8890"
+	- "1111:1111"
+      volumes:
+      	- /data/virtuoso:/data
+
   elasticsearch:
       build: elasticsearch/
       volumes:
