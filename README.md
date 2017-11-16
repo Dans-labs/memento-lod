@@ -1,6 +1,6 @@
-# Memento-lod
+# Memento LOD
 
-Linked Open Data framework with Memento protocol
+Linked Open Data with Memento protocol. This is integration framework with tools developed by http://github.com/CLARIAH and metadata exposed from DANS systems.
 
 Memento LOD consists of REST APIs built on microservices: Flask, mySQL, MongoDB as files storage and Elasticsearch as search engine.
 All triples are handled by Virtuoso SPARQL endpoint in combination with grlc as REST API interface. 
