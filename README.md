@@ -1,13 +1,13 @@
 # Memento LOD
 
-Linked Open Data with Memento protocol. This is integration framework with tools developed by [CLARIAH](http://github.com/CLARIAH) and metadata exposed from DANS systems.
-Memento LOD was designed and created by [Vyacheslav Tykhonov](https://dans.knaw.nl/nl/over/organisatie-beleid/medewerkers/tykhonov), Senior Data Scientist of Data Archiving and Network Services (DANS).
+Memento LOD is Linked Open Data framework with support of Memento protocol. It was created and designed by [Vyacheslav Tykhonov](https://dans.knaw.nl/nl/over/organisatie-beleid/medewerkers/tykhonov), Senior Data Scientist of Data Archiving and Network Services ([DANS]https://dans.knaw.nl()).
+Most of Linked Data tools developed by [CLARIAH](http://github.com/CLARIAH) and metadata exposed from major DANS services: DataverseNL, EASY and NARCIS.
 
 # Architecture
 
 Memento LOD consists of REST APIs built on microservices: Flask, mySQL, MongoDB as files storage and Elasticsearch as search engine.
 
-All original triples from data archive (/data folder) are handled by Virtuoso and available on SPARQL endpoint running in the combination with grlc as REST API interface. 
+All original triples from data archive (/data folder) are handled by Virtuoso and available on SPARQL endpoint running in the combination with grlc as REST API interface to expose Linked Data in web. 
 
 Newly created triples will be processed by [Timbuctoo RDF datastore](https://github.com/HuygensING/timbuctoo) and available for exploration by GraphIQL in-browser IDE. 
 
