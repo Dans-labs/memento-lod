@@ -2,7 +2,7 @@
 
 Linked Open Data framework with Memento protocol
 
-Memento LOD consitsts of REST API with Flask and Elasticsearch as backend.
+Memento LOD consists of REST API with Flask and Elasticsearch as backend.
 
 Install docker, docker-compose (pip install docker-compose and type
 
