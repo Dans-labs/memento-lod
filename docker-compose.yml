@@ -15,6 +15,18 @@ services:
       volumes:
       	- /data/virtuoso:/data
 
+  grlc:
+      build: grlc
+      image: clariah/grlc:latest
+      restart: unless-stopped
+      ports:
+     	- "8001:80"
+      environment:
+     	- DEBUG=true
+     	- USERMAP_GID=1000
+     	- USERMAP_UID=1000
+     	- GRLC_GITHUB_ACCESS_TOKEN=xxx
+
   elasticsearch:
       build: elasticsearch/
       volumes:
