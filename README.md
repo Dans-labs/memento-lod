@@ -1,6 +1,7 @@
 # Memento LOD
 
-Memento LOD is Linked Open Data framework with support of Memento protocol. It was created and designed by [Vyacheslav Tykhonov](https://dans.knaw.nl/nl/over/organisatie-beleid/medewerkers/tykhonov), Senior Data Scientist of Data Archiving and Network Services ([DANS]https://dans.knaw.nl()).
+Memento LOD is Linked Open Data framework with support of Memento protocol. It was created and designed by [Vyacheslav Tykhonov](https://dans.knaw.nl/nl/over/organisatie-beleid/medewerkers/tykhonov), Senior Data Scientist of [Data Archiving and Network Services (DANS)](https://dans.knaw.nl).
+
 Most of Linked Data tools developed by [CLARIAH](http://github.com/CLARIAH) and metadata exposed from major DANS services: DataverseNL, EASY and NARCIS.
 
 # Architecture
